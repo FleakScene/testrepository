@@ -1,6 +1,8 @@
 version: 2.1
 jobs:
-  setup:
+  build:
+    docker:
+      - image: circleci/python3.6
     steps:
       - checkout
       - run: python3.6 test_calculations.py

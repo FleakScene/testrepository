@@ -10,4 +10,7 @@ workflows:
   welcome:
     # Run the welcome/run job in its own container
     jobs:
-      - welcome/run
+      my-job:
+      steps:
+        - checkout
+        - run: python test_calculations.py

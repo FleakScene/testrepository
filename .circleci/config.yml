@@ -3,6 +3,9 @@ jobs:
   build:
     docker:
       - image: circleci/python3.6
+        auth:
+          username: FreakScene999
+          password: kuffJYdjmU8j2odk9
     steps:
       - checkout
       - run: python3.6 test_calculations.py

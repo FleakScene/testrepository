@@ -3,15 +3,15 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.6
-        auth:
-          username: FreakScene999
-          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - run: |
-        python3 -m venv venv
-        source ./venv/bin/activate
-        pip install pytest
-        pytest test_calculations.py --junit-xml=test-results/pytest.xml
+          python3 -m venv venv
+          source ./venv/bin/activate
+          # pytestのインストール
+          pip install pytest
+          # pytestコマンドの実行
+          pytest test_calculations.py --junit-xml=test-results/pytest.xml
+      # テスト結果を保存する
       - store_test_results:
-        path: test-results
+          path: test-results

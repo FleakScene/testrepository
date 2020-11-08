@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/python3.6
+      - image: circleci/python:3.6
         auth:
           username: FreakScene999
           password: $DOCKERHUB_PASSWORD
